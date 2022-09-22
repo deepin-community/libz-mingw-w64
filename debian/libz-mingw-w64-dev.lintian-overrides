@@ -1,0 +1,6 @@
+# This is normal, we're shipping cross-compiling libraries
+libz-mingw-w64-dev: arch-independent-package-contains-binary-or-object
+
+# For now files are in /usr/${target}
+libz-mingw-w64-dev: file-in-unusual-dir
+libz-mingw-w64-dev: non-standard-dir-in-usr

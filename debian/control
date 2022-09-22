@@ -1,0 +1,33 @@
+Source: libz-mingw-w64
+Maintainer: Stephen Kitt <skitt@debian.org>
+Section: libs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: gcc-mingw-w64
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/mingw-w64-team/libz-mingw-w64
+Vcs-Git: https://salsa.debian.org/mingw-w64-team/libz-mingw-w64.git
+Homepage: https://zlib.net/
+Rules-Requires-Root: no
+
+Package: libz-mingw-w64
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: compression library - Windows runtime
+ zlib is a library implementing the deflate compression method found
+ in gzip and PKZIP. This package includes the DLLs for 32- and 64-bit
+ Windows.
+
+Package: libz-mingw-w64-dev
+Architecture: all
+Multi-Arch: foreign
+Section: libdevel
+Depends: libz-mingw-w64 (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: compression library - Windows development files
+ zlib is a library implementing the deflate compression method found
+ in gzip and PKZIP. This package includes the development support
+ files for 32- and 64-bit Windows.

@@ -1,0 +1,70 @@
+libz-mingw-w64 (1.2.11+dfsg-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Use secure URI in debian/watch.
+  * Use secure URI in Homepage field.
+  * Bump debhelper from old 11 to 12.
+  * debian/copyright: use spaces rather than tabs to start continuation lines.
+
+  [ Stephen Kitt ]
+  * Set “Rules-Requires-Root: no”.
+  * Switch to debhelper compatibility level 13.
+  * Update debian/watch to version 4 and simplify.
+  * Standards-Version 4.6.0, no further change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Sun, 05 Sep 2021 17:49:12 +0200
+
+libz-mingw-w64 (1.2.11+dfsg-2) unstable; urgency=medium
+
+  * Migrate to Salsa.
+  * Install examples in libz-mingw-w64-dev.
+  * Update debian/copyright.
+  * Switch to debhelper compatibility level 11.
+  * Remove unnecessary commented statements from debian/rules.
+  * Indicate that the packages are “Multi-Arch: foreign”.
+  * Standards-Version 4.1.4, no further change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Wed, 09 May 2018 20:24:45 +0200
+
+libz-mingw-w64 (1.2.11+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Stephen Kitt <skitt@debian.org>  Fri, 20 Jan 2017 20:54:14 +0100
+
+libz-mingw-w64 (1.2.10+dfsg-1) unstable; urgency=medium
+
+  * New upstream release, merging all patches.
+  * Add upstream signing key.
+
+ -- Stephen Kitt <skitt@debian.org>  Thu, 05 Jan 2017 08:55:54 +0100
+
+libz-mingw-w64 (1.2.8+dfsg-4) unstable; urgency=medium
+
+  * Apply upstream fixes for CVE-2016-9842 and CVE-2016-9843.
+
+ -- Stephen Kitt <skitt@debian.org>  Tue, 06 Dec 2016 22:21:15 +0100
+
+libz-mingw-w64 (1.2.8+dfsg-3) unstable; urgency=medium
+
+  * Apply upstream fixes for CVE-2016-9840 and CVE-2016-9841.
+  * Clean up debian/control using cme.
+  * Standards-Version 3.9.8, no change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Tue, 06 Dec 2016 22:13:40 +0100
+
+libz-mingw-w64 (1.2.8+dfsg-2) unstable; urgency=medium
+
+  * Switch to https: VCS URIs (see #810378).
+  * Ship static libraries. Closes: #814868; thanks to Daniel Kahn
+    Gillmor for the patch!
+  * This is of course zlib upstream; correct debian/copyright
+    accordingly.
+
+ -- Stephen Kitt <skitt@debian.org>  Tue, 16 Feb 2016 12:23:57 +0100
+
+libz-mingw-w64 (1.2.8+dfsg-1) unstable; urgency=low
+
+  * Initial release. Closes: #759762. LP: #1022397.
+
+ -- Stephen Kitt <skitt@debian.org>  Fri, 01 Jan 2016 19:33:05 +0100

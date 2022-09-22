@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+TARGETS := i686-w64-mingw32 x86_64-w64-mingw32
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	for target in $(TARGETS); do \
+		rm -rf build-$$target; \
+	done
+	dh_auto_clean
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+	for target in $(TARGETS); do \
+		mkdir -p build-$$target && \
+		cd build-$$target && \
+		ln -s ../*.[ch] ../*.pc.in ../test ../win32 . && \
+		make -f win32/Makefile.gcc PREFIX=$${target}- && \
+		cd ..; \
+	done
+
+override_dh_auto_install:
+	for target in $(TARGETS); do \
+		cd build-$$target && \
+		make -f win32/Makefile.gcc PREFIX=$${target}- DESTDIR=../debian/tmp BINARY_PATH=/usr/$${target}/lib INCLUDE_PATH=/usr/$${target}/include LIBRARY_PATH=/usr/$${target}/lib SHARED_MODE=1 prefix=/usr install && \
+		cd ..; \
+	done
